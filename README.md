@@ -1,0 +1,1 @@
+# cursor-training-task-master-pro
