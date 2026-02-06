@@ -1,0 +1,12 @@
+-- CreateTable
+CREATE TABLE "Task" (
+    "id" TEXT NOT NULL PRIMARY KEY,
+    "title" TEXT NOT NULL,
+    "description" TEXT,
+    "status" TEXT NOT NULL DEFAULT 'PENDING',
+    "priority" TEXT NOT NULL DEFAULT 'MEDIUM',
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" DATETIME NOT NULL,
+    "userId" TEXT NOT NULL,
+    "deletedAt" DATETIME
+);

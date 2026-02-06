@@ -1,0 +1,26 @@
+# Project: TaskMaster Pro - Cursor Rules
+
+## General Principles
+- Use **TypeScript** for all files. Use strict mode.
+- Architecture: **Clean Architecture** (Layers: Controllers, Services, Repositories).
+- Programming Style: **Object-Oriented (OOP)** with Classes and Dependency Injection.
+- No "any" type; define interfaces/types for all data structures.
+
+## Backend Stack (Node.js/Express)
+- Framework: Express.js.
+- ORM: Prisma with SQLite.
+- Validation: Use **Zod** for request body/param validation.
+- Error Handling: Use a global Error Middleware and a custom `AppError` class.
+
+## Database (Prisma)
+- Naming: Use camelCase for fields and PascalCase for Models.
+- Always include `createdAt` and `updated_at` (mapped to `updatedAt`).
+- Implement **Soft Deletes** using a `deletedAt` field.
+
+## Documentation & Testing
+- Use **JSDoc/TSDoc** for all public methods in Services and Repositories.
+- Testing: Write **Jest** tests for Business Logic (Services). Use a "Given-When-Then" naming convention for test cases.
+
+## Security
+- Implement a Middleware to check for a `X-API-KEY` in the headers. 
+- API Key should be loaded from an `.env` file.
